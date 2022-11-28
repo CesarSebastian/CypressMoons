@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 1,
+    "pending": 0,
+    "failures": 4,
+    "start": "2020-12-09T23:40:46.940Z",
+    "end": "2020-12-09T23:41:04.478Z",
+    "duration": 17538,
+    "testsRegistered": 5,
+    "passPercent": 20,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "61d4f740-3644-48d3-adff-facf4384413e",
+      "title": "",
+      "fullFile": "cypress/integration/NineMonthsDiscount/NineMonths_Discount_NoCoupon_NoPayment_2.js",
+      "file": "cypress/integration/NineMonthsDiscount/NineMonths_Discount_NoCoupon_NoPayment_2.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "72f2dcfc-dc69-4de2-af08-07571f35c3e6",
+          "title": "Discount One Payment",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Purchase Summary",
+              "fullTitle": "Discount One Payment Purchase Summary",
+              "timedOut": null,
+              "duration": 100,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.VisitPage(this.env.hostMex + this.env.PriceLower);\ncy.ContainsText(this.data.textWhatPayment);\ncy.ValidateExistCoupon(false);\ncy.ButtonClick(this.data.buttonContinue);\nsetImmediate(done);",
+              "err": {},
+              "uuid": "c9740a26-818f-4b68-90b9-7aada552d6a8",
+              "parentUUID": "72f2dcfc-dc69-4de2-af08-07571f35c3e6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Shopping Address",
+              "fullTitle": "Discount One Payment Shopping Address",
+              "timedOut": null,
+              "duration": 4377,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.ContainsText(this.data.textWhereSend);\ncy.ShippingAddress(this.data.street, this.data.interiorNumber, this.data.zipCode, this.data.colony, this.data.state, this.data.city, this.data.reference);\ncy.ButtonClick(this.data.buttonContinue);",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: '¿Dónde enviaremos tus moons cuando esten listos?' but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: '¿Dónde enviaremos tus moons cuando esten listos?' but never did.\n    at Context.eval (http://localhost:52080/__cypress/tests?p=cypress/support/index.js:477:6)",
+                "diff": null
+              },
+              "uuid": "a3cb6001-cf4c-476c-b56b-c98d737593b5",
+              "parentUUID": "72f2dcfc-dc69-4de2-af08-07571f35c3e6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Payment Method",
+              "fullTitle": "Discount One Payment Payment Method",
+              "timedOut": null,
+              "duration": 4311,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.ContainsText(this.data.textPaymentMeth);\ncy.PaymentMethod(this.data.cardName, this.data.cardIDMexicoMeses, this.data.month, this.data.year, this.data.cvc);",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'Método de Pago' but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'Método de Pago' but never did.\n    at Context.eval (http://localhost:52080/__cypress/tests?p=cypress/support/index.js:477:6)",
+                "diff": null
+              },
+              "uuid": "ec382c79-3166-429a-99f1-cca87e55e050",
+              "parentUUID": "72f2dcfc-dc69-4de2-af08-07571f35c3e6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TestToBackend",
+              "fullTitle": "Discount One Payment TestToBackend",
+              "timedOut": null,
+              "duration": 4320,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.ValitadeMSI(this.data.NineMonths);\ncy.ButtonClick(this.data.buttonPayment);\ncy.wait(10000);",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `#installments-selector-two`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#installments-selector-two`, but never found it.\n    at Context.eval (http://localhost:52080/__cypress/tests?p=cypress/support/index.js:448:10)",
+                "diff": null
+              },
+              "uuid": "c545404b-17e6-4d40-bcb0-12ee7718dc3e",
+              "parentUUID": "72f2dcfc-dc69-4de2-af08-07571f35c3e6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "ValidateSuccessfulPayment",
+              "fullTitle": "Discount One Payment ValidateSuccessfulPayment",
+              "timedOut": null,
+              "duration": 4323,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains(this.data.textSuccefulPayment);\ncy.get(\".SuccessCardTwo_TransactionId__1GN_E\").invoke('val').should(\"not.be.empty\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'Código de confirmación' but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'Código de confirmación' but never did.\n    at Context.eval (http://localhost:52080/__cypress/tests?p=cypress/integration/NineMonthsDiscount/NineMonths_Discount_NoCoupon_NoPayment_2.js:625:8)",
+                "diff": null
+              },
+              "uuid": "373a4803-5041-4d65-bf77-e1a1bffd54af",
+              "parentUUID": "72f2dcfc-dc69-4de2-af08-07571f35c3e6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c9740a26-818f-4b68-90b9-7aada552d6a8"
+          ],
+          "failures": [
+            "a3cb6001-cf4c-476c-b56b-c98d737593b5",
+            "ec382c79-3166-429a-99f1-cca87e55e050",
+            "c545404b-17e6-4d40-bcb0-12ee7718dc3e",
+            "373a4803-5041-4d65-bf77-e1a1bffd54af"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 17431,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

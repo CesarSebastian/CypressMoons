@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-12-16T23:01:01.438Z",
+    "end": "2020-12-16T23:01:24.848Z",
+    "duration": 23410,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0f5b99eb-d78d-4502-8ceb-6d9530e70679",
+      "title": "",
+      "fullFile": "cypress/integration/ThreeMonthsDiscount/TreeMonths_Discount_NoCoupon_NoPayment_1.js",
+      "file": "cypress/integration/ThreeMonthsDiscount/TreeMonths_Discount_NoCoupon_NoPayment_1.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "404acada-54f6-4416-80ed-f4f0cb3dffdc",
+          "title": "TreeMonths_Discount_NoCoupon_NoPayment_1",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Purchase Summary",
+              "fullTitle": "TreeMonths_Discount_NoCoupon_NoPayment_1 Purchase Summary",
+              "timedOut": null,
+              "duration": 3980,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.VisitPage(this.env.hostMex + this.env.AdvanceGreater);\ncy.ContainsText(this.data.textWhatPayment);\ncy.ValidateExistCoupon(false);\ncy.ButtonClick(this.data.buttonContinue);",
+              "err": {},
+              "uuid": "a23274b0-136e-4bdf-85b2-99ab6e89af43",
+              "parentUUID": "404acada-54f6-4416-80ed-f4f0cb3dffdc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Shipping Address",
+              "fullTitle": "TreeMonths_Discount_NoCoupon_NoPayment_1 Shipping Address",
+              "timedOut": null,
+              "duration": 4887,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.ContainsText(this.data.textWhereSend);\ncy.ClearShippingA();\ncy.ShippingAddress(this.data.street, this.data.interiorNumber, this.data.zipCode, this.data.colony, this.data.state, this.data.city, this.data.reference);\ncy.ButtonClick(this.data.buttonContinue);",
+              "err": {},
+              "uuid": "e132e155-9891-48af-b8b0-e7d8a90fa623",
+              "parentUUID": "404acada-54f6-4416-80ed-f4f0cb3dffdc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Payment Method",
+              "fullTitle": "TreeMonths_Discount_NoCoupon_NoPayment_1 Payment Method",
+              "timedOut": null,
+              "duration": 1645,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.ContainsText(this.data.textPaymentMeth);\ncy.PaymentMethod(this.data.cardName, this.data.cardIDMexicoMeses, this.data.month, this.data.year, this.data.cvc);",
+              "err": {},
+              "uuid": "491d9d4c-f4f6-47e6-b989-b03541d31f31",
+              "parentUUID": "404acada-54f6-4416-80ed-f4f0cb3dffdc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TestToBackend",
+              "fullTitle": "TreeMonths_Discount_NoCoupon_NoPayment_1 TestToBackend",
+              "timedOut": null,
+              "duration": 10418,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.ValitadeMSI(this.data.ThreeMonths);\ncy.ButtonClick(this.data.buttonPayment);\ncy.wait(10000);",
+              "err": {},
+              "uuid": "3291699f-bb63-455c-af63-54b6a637c067",
+              "parentUUID": "404acada-54f6-4416-80ed-f4f0cb3dffdc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "ValidateSuccessfulPayment",
+              "fullTitle": "TreeMonths_Discount_NoCoupon_NoPayment_1 ValidateSuccessfulPayment",
+              "timedOut": null,
+              "duration": 99,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.ValidateCodeConfirmation(this.data.textSuccefulPayment);",
+              "err": {},
+              "uuid": "93cf59e3-da34-40e3-98e6-d61cec9ffe6a",
+              "parentUUID": "404acada-54f6-4416-80ed-f4f0cb3dffdc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a23274b0-136e-4bdf-85b2-99ab6e89af43",
+            "e132e155-9891-48af-b8b0-e7d8a90fa623",
+            "491d9d4c-f4f6-47e6-b989-b03541d31f31",
+            "3291699f-bb63-455c-af63-54b6a637c067",
+            "93cf59e3-da34-40e3-98e6-d61cec9ffe6a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 21029,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

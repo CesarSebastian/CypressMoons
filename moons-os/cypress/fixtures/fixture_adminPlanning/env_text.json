@@ -1,0 +1,8 @@
+{
+    "upload_correct":"Pool actualizado exitosamente",
+    "pool_required":"Pool es requerido",
+    "customerid_required":"CustomerId es requerido",
+    "user_required":"User es requerido",
+    "cambiar_severidad":"Cambiar severidad",
+    "severidad":"Severidad es requerido"
+}

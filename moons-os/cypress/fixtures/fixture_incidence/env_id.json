@@ -1,0 +1,13 @@
+{
+    "filter_incidence":"#incidences-countries-input",
+    "filter":{
+        "mexico":"#incidences-country-méxico",
+        "colombia":"#incidences-country-colombia",
+        "todos":"#incidences-country-todos"
+    },
+    "tickets_whit":"#incidences-ticket-router",
+    "tickets_out":"#incidences-pendingticket-router",
+    "tickets_search":"#incidences-search-input",
+    "next_page":"#incidences-pagination-input > .v-pagination > li > .v-pagination__navigation > .mdi-chevron-right",
+    "previous_page":"#incidences-pagination-input > .v-pagination > li > .v-pagination__navigation > .mdi-chevron-left"
+}

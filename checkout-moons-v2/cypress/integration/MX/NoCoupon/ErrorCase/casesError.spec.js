@@ -1,0 +1,62 @@
+describe.only('search problems', function(){
+    beforeEach(()=>{
+        cy.fixture('env.json').as('env');
+        cy.fixture('data.json').as('data');
+    })
+    it.only('Validate Blank Space',function(){
+        cy
+        .VisitPage(this.env.hostMex+this.env.url1);
+        cy
+        .ButtonClick(this.data.buttonContinue);
+        cy
+        .ClearShippingA();
+
+        //BlankSpace in random input to validate 
+        cy
+        .ShippingAddress(
+            this.data.street,
+            this.data.interiorNumber,
+            this.data.blankSpace,//zipCode
+            this.data.colony,
+            this.data.state,
+            this.data.city,
+            this.data.reference
+        );
+        cy
+        .ButtonClick(this.data.buttonContinue);
+        cy
+        .ValitadeText(this.data.textRequired).wait(2000);
+    });
+    it.only('Validate Two Digit Year',function(){
+        cy
+        .VisitPage(this.env.hostMex+this.env.url1);
+        cy
+        .ButtonClick(this.data.buttonContinue);
+        cy
+        .ClearShippingA();
+        cy
+        .ShippingAddress(
+            this.data.street,
+            this.data.interiorNumber,
+            this.data.zipCode,
+            this.data.colony,
+            this.data.state,
+            this.data.city,
+            this.data.reference
+        );
+        cy
+        .ButtonClick(this.data.buttonContinue);
+        cy
+        .PaymentMethod(
+            this.data.cardName,
+            this.data.cardIDMexico,
+            this.data.month,
+            "1",
+            this.data.cvc
+        );
+        cy
+        .ButtonClick(this.data.buttonPayment);
+        cy
+        .ValitadeText(this.data.textYearVerify)
+    });
+});

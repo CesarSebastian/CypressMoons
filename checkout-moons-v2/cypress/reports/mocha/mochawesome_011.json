@@ -1,0 +1,188 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-12-16T22:42:26.989Z",
+    "end": "2020-12-16T22:42:46.884Z",
+    "duration": 19895,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4677817d-2cd5-4957-9d97-85fea7fd56e6",
+      "title": "",
+      "fullFile": "cypress/integration/NineMonthsApply/NineMonths_Apply_NoCoupon_NoPayment_1.js",
+      "file": "cypress/integration/NineMonthsApply/NineMonths_Apply_NoCoupon_NoPayment_1.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fd824e4b-9b7d-429a-9811-23bd1a31702f",
+          "title": "NineMonths_Apply_NoCoupon_NoPayment_1",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Purchase Summary",
+              "fullTitle": "NineMonths_Apply_NoCoupon_NoPayment_1 Purchase Summary",
+              "timedOut": null,
+              "duration": 2334,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.VisitPage(this.env.hostMex + this.env.url5);\ncy.ContainsText(this.data.textWhatPayment);\ncy.ValidateExistCoupon(false);\ncy.ButtonClick(this.data.buttonContinue);",
+              "err": {},
+              "uuid": "0bcb1668-3b7b-41d5-a232-149d1ac23120",
+              "parentUUID": "fd824e4b-9b7d-429a-9811-23bd1a31702f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Shipping Address",
+              "fullTitle": "NineMonths_Apply_NoCoupon_NoPayment_1 Shipping Address",
+              "timedOut": null,
+              "duration": 4393,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.ContainsText(this.data.textWhereSend);\ncy.ClearShippingA();\ncy.ShippingAddress(this.data.street, this.data.interiorNumber, this.data.zipCode, this.data.colony, this.data.state, this.data.city, this.data.reference);\ncy.ButtonClick(this.data.buttonContinue);",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: '¿Dónde enviaremos tus moons cuando esten listos?' but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: '¿Dónde enviaremos tus moons cuando esten listos?' but never did.\n    at Context.eval (https://checkout-dev-e42c8.web.app/__cypress/tests?p=cypress/support/index.js:211:6)",
+                "diff": null
+              },
+              "uuid": "aebc721c-ae70-494f-8ada-736c741b940c",
+              "parentUUID": "fd824e4b-9b7d-429a-9811-23bd1a31702f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Payment Method",
+              "fullTitle": "NineMonths_Apply_NoCoupon_NoPayment_1 Payment Method",
+              "timedOut": null,
+              "duration": 1322,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.ContainsText(this.data.textPaymentMeth);\ncy.PaymentMethod(this.data.cardName, this.data.cardIDMexicoMeses, this.data.month, this.data.year, this.data.cvc);",
+              "err": {},
+              "uuid": "2aff5ae3-f47c-4658-8960-8c6310e5e1f3",
+              "parentUUID": "fd824e4b-9b7d-429a-9811-23bd1a31702f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TestToBackend",
+              "fullTitle": "NineMonths_Apply_NoCoupon_NoPayment_1 TestToBackend",
+              "timedOut": null,
+              "duration": 10315,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.ConvertNumber(this.data.NineMonths);\ncy.ButtonClick(this.data.buttonPayment);\ncy.wait(10000);",
+              "err": {},
+              "uuid": "5996298e-1e65-4cab-a62d-61a5d69d8989",
+              "parentUUID": "fd824e4b-9b7d-429a-9811-23bd1a31702f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "ValidateSuccessfulPayment",
+              "fullTitle": "NineMonths_Apply_NoCoupon_NoPayment_1 ValidateSuccessfulPayment",
+              "timedOut": null,
+              "duration": 40,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.ValidateCodeConfirmation(this.data.textSuccefulPayment);",
+              "err": {},
+              "uuid": "a0377425-f57e-422a-9045-975e19a42606",
+              "parentUUID": "fd824e4b-9b7d-429a-9811-23bd1a31702f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0bcb1668-3b7b-41d5-a232-149d1ac23120",
+            "2aff5ae3-f47c-4658-8960-8c6310e5e1f3",
+            "5996298e-1e65-4cab-a62d-61a5d69d8989",
+            "a0377425-f57e-422a-9045-975e19a42606"
+          ],
+          "failures": [
+            "aebc721c-ae70-494f-8ada-736c741b940c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 18404,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

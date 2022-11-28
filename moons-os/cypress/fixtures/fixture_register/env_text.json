@@ -1,0 +1,8 @@
+{
+    "name":"Name es requerido",
+    "email":"Email es obligatorio",
+    "mattermost":"Mattermost es requerido",
+    "role":"Asignar al menos un rol al usuario",
+    "emailNoValid":"Email no es válido",
+    "userExist":"El usuario ya se encuentra registrado"
+}

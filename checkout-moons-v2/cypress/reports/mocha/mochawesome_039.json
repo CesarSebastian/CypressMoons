@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-12-16T22:59:34.208Z",
+    "end": "2020-12-16T22:59:51.891Z",
+    "duration": 17683,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5710790f-5463-43c5-bc85-754dd8ca76fb",
+      "title": "",
+      "fullFile": "cypress/integration/ThreeMonthsApply/TreeMonths_Apply_NoCoupon_Partial_3.js",
+      "file": "cypress/integration/ThreeMonthsApply/TreeMonths_Apply_NoCoupon_Partial_3.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c3884ee7-66ce-44c4-8840-265f2b43180c",
+          "title": "TreeMonths_Apply_NoCoupon_Partial_3",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Purchase Summary",
+              "fullTitle": "TreeMonths_Apply_NoCoupon_Partial_3 Purchase Summary",
+              "timedOut": null,
+              "duration": 3352,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.VisitPage(this.env.hostMex + this.env.TestPriceGreater);\ncy.ContainsText(this.data.textWhatPayment);\ncy.ValidateExistCoupon(false);\ncy.ButtonClick(this.data.buttonContinue);",
+              "err": {},
+              "uuid": "e2e8fc67-b9d8-4f78-ba60-8abd819b5a17",
+              "parentUUID": "c3884ee7-66ce-44c4-8840-265f2b43180c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Payment Method",
+              "fullTitle": "TreeMonths_Apply_NoCoupon_Partial_3 Payment Method",
+              "timedOut": null,
+              "duration": 1730,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.ContainsText(this.data.textPaymentMeth);\ncy.PaymentMethod(this.data.cardName, this.data.cardIDMexicoMeses, this.data.month, this.data.year, this.data.cvc);",
+              "err": {},
+              "uuid": "2636190b-18a5-422c-8bb5-fe99c176be4c",
+              "parentUUID": "c3884ee7-66ce-44c4-8840-265f2b43180c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TestToBackend",
+              "fullTitle": "TreeMonths_Apply_NoCoupon_Partial_3 TestToBackend",
+              "timedOut": null,
+              "duration": 10430,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.ConvertNumber(this.data.ThreeMonths);\ncy.ButtonClick(this.data.buttonPayment);\ncy.wait(10000);",
+              "err": {},
+              "uuid": "a8f0ccb7-d12c-4988-abc9-c6e9aabaa6b3",
+              "parentUUID": "c3884ee7-66ce-44c4-8840-265f2b43180c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "ValidateSuccessfulPayment",
+              "fullTitle": "TreeMonths_Apply_NoCoupon_Partial_3 ValidateSuccessfulPayment",
+              "timedOut": null,
+              "duration": 68,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.ValidateCodeConfirmation(this.data.textSuccefulPayment);",
+              "err": {},
+              "uuid": "e8038a88-d90a-4fc4-bbc7-86b78fdb1c74",
+              "parentUUID": "c3884ee7-66ce-44c4-8840-265f2b43180c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e2e8fc67-b9d8-4f78-ba60-8abd819b5a17",
+            "2636190b-18a5-422c-8bb5-fe99c176be4c",
+            "a8f0ccb7-d12c-4988-abc9-c6e9aabaa6b3",
+            "e8038a88-d90a-4fc4-bbc7-86b78fdb1c74"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15580,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

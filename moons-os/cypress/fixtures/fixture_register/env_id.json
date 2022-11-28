@@ -1,0 +1,26 @@
+{
+    "name":"#register-name-input",
+    "email":"#register-email-input",
+    "mattermost":"#register-mattermost-input",
+    "role":".v-select__selections",
+    "roles":{
+        "tmkt":"#role-tmkt",
+        "diseñador":"#role-diseñador",
+        "auditor":"#role-auditor",
+        "finance":"#role-finance",
+        "uploader":"#role-uploader",
+        "adminplanning":"#role-admin_planning",
+        "refunder":"#role-refunder",
+        "diagnosta":"#role-diagnosta",
+        "planeador":"#role-planeador",
+        "test":"#role-test",
+        "exportador":"#role-exportador",
+        "replan":"#role-replan",
+        "administrador":"#role-administrador",
+        "retail":"#role-retail",
+        "inspector":"#role-inspector",
+        "production":"#role-production",
+        "ongoin":"#role-ongoing"
+    },
+    "registrar":"#register-button"
+}

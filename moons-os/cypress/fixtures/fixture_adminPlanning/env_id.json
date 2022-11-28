@@ -1,0 +1,37 @@
+{
+    "customerId":"#pools-customerId-input",
+    "pool":"#pools_pools_input",
+    "pools":{
+        "upload_error_recovery":"#pools-pool-upload_error_recovery",
+        "waiting_delimitation":"#pools-pool-waiting_for_delimitation",
+        "delimitation_error_recovery":"#pools-pool-delimitation_error_recovery",
+        "delimitation":"#pools-pool-delimitation",
+        "waiting_planning":"#pools-pool-waiting_for_planning",
+        "replanning":"#pools-pool-replanning",
+        "planning":"#pools-pool-planning",
+        "waiting_video_upload":"#pools-pool-waiting_for_video_upload",
+        "video_upload":"#pools-pool-video_upload",
+        "waiting_staging":"#pools-pool-waiting_for_staging",
+        "staging_pending":"#pools-pool-staging_pending",
+        "waiting_reupload_video":"#pools-pool-waiting_for_reupload_video",
+        "reupload_video":"#pools-pool-reupload_video",
+        "waiting_export":"#pools-pool-waiting_for_export",
+        "export_error_recovery":"#pools-pool-export_error_recovery",
+        "export":"#pools-pool-export",
+        "waiting_production":"#pools-pool-waiting_for_production"
+    },
+    "user":"#pools_users_input",
+    "users":{
+        "user":"#pools-user-vrTgCyxdAY"
+    },
+    "btn_cambiar":"#pools-submit-btn",
+    "customerId_cs":"#severity-customerId-input",
+    "selectseveridad":"#severity_severities_input",
+    "severidad":{
+        "leve":"severities-severity-leve",
+        "moderado":"severities-severity-moderado",
+        "advanced":"severities-severity-advanced"
+    },
+    "checkbox_replanning":"#severity-isreplanning-input",
+    "button_changes":"#severity-submit-btn"
+}

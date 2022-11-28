@@ -1,0 +1,11 @@
+{
+    "url_dev":"https://dev-moons-os.web.app/",
+    "url_prod":"https://moons-os.web.app",
+    "email_dev":"admintest@mymoons.mx",
+    "password_dev":"qwe123",
+    "email_prod":"test.qa@mymoons.mx",
+    "password_prod":"123qwe",
+    "register":"/register",
+    "admin_planning":"/admin-planning",
+    "incidence":"/incidences"
+}

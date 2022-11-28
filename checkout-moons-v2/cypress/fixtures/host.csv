@@ -1,0 +1,2 @@
+host|product|paymentId
+http://localhost:3000/checkout/|42pmvqx2rhr8/|testAdvance

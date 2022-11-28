@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-12-16T22:47:41.336Z",
+    "end": "2020-12-16T22:48:04.880Z",
+    "duration": 23544,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9dadf6a8-4dbe-4816-b354-c58bc3cbfb6f",
+      "title": "",
+      "fullFile": "cypress/integration/NoMonthsApplyToPrice/url2.spec.js",
+      "file": "cypress/integration/NoMonthsApplyToPrice/url2.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7cd95082-887a-4597-98f8-c5593942c06a",
+          "title": "Loading Page Url2",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Purchase Summary",
+              "fullTitle": "Loading Page Url2 Purchase Summary",
+              "timedOut": null,
+              "duration": 4028,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.VisitPage(this.env.hostMex + this.env.url2);\ncy.ContainsText(this.data.textWhatPayment);\ncy.ValidateExistCoupon(false);\ncy.ButtonClick(this.data.buttonContinue);",
+              "err": {},
+              "uuid": "205cbf67-66d0-45c3-9cb5-e7d0259ea9df",
+              "parentUUID": "7cd95082-887a-4597-98f8-c5593942c06a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Shipping Address",
+              "fullTitle": "Loading Page Url2 Shipping Address",
+              "timedOut": null,
+              "duration": 5153,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.ContainsText(this.data.textWhereSend);\ncy.ClearShippingA();\ncy.ShippingAddress(this.data.street, this.data.interiorNumber, this.data.zipCode, this.data.colony, this.data.state, this.data.city, this.data.reference);\ncy.ButtonClick(this.data.buttonContinue);",
+              "err": {},
+              "uuid": "ac22d911-5533-4130-a379-41e7f23a9da4",
+              "parentUUID": "7cd95082-887a-4597-98f8-c5593942c06a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Payment Method",
+              "fullTitle": "Loading Page Url2 Payment Method",
+              "timedOut": null,
+              "duration": 1716,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.ContainsText(this.data.textPaymentMeth);\ncy.PaymentMethod(this.data.cardName, this.data.cardIDMexico, this.data.month, this.data.year, this.data.cvc);",
+              "err": {},
+              "uuid": "3278afdd-72e3-46e1-ae28-6e1a759a8139",
+              "parentUUID": "7cd95082-887a-4597-98f8-c5593942c06a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TestToBackend",
+              "fullTitle": "Loading Page Url2 TestToBackend",
+              "timedOut": null,
+              "duration": 10419,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.ValitadeMSI(this.data.NoMounths);\ncy.ButtonClick(this.data.buttonPayment);\ncy.wait(10000);",
+              "err": {},
+              "uuid": "674275ea-ac1e-4ca4-b5e1-10c77d0ebdef",
+              "parentUUID": "7cd95082-887a-4597-98f8-c5593942c06a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "ValidateSuccessfulPayment",
+              "fullTitle": "Loading Page Url2 ValidateSuccessfulPayment",
+              "timedOut": null,
+              "duration": 100,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.ValidateCodeConfirmation(this.data.textSuccefulPayment);",
+              "err": {},
+              "uuid": "a242f136-a1bb-4756-954d-4f890cc4fce1",
+              "parentUUID": "7cd95082-887a-4597-98f8-c5593942c06a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "205cbf67-66d0-45c3-9cb5-e7d0259ea9df",
+            "ac22d911-5533-4130-a379-41e7f23a9da4",
+            "3278afdd-72e3-46e1-ae28-6e1a759a8139",
+            "674275ea-ac1e-4ca4-b5e1-10c77d0ebdef",
+            "a242f136-a1bb-4756-954d-4f890cc4fce1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 21416,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

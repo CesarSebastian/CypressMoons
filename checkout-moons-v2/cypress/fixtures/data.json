@@ -1,0 +1,47 @@
+{
+ 
+  "street": "cobre 239" ,
+  "interiorNumber": "depto F - 203",
+  "zipCode": "15220",
+  "colony": "Venustiano Carranza",
+  "state": "CDMX",
+  "city": "CDMX",
+  "reference": "frente al deportivo calles",
+
+  "blankSpace":" ",
+
+  "cardName": "Testito QA",
+  "cardIDMexicoMeses": "4000004840000008",
+  "cardIDMexico": "4242424242424242",
+  "cardIDMexicofail":"4000000000009995",
+  "cardIDCoMeses": "5031755734530604",
+  "cardIDCo": "5031755734530604",
+  "idDocument":"12345678",
+  "month": "12",
+  "year": "21",
+  "yearFail": "21",
+  "cvc": "1234",
+  "hola": "test" ,
+  "hola2": "test2",
+
+  "buttonContinue":"CONTINUAR",
+  "buttonPayment":"Pagar",
+
+  "textWhatPayment":"¿Qué vas a pagar?",
+  "textWhereSend":"¿Dónde enviaremos tus moons cuando esten listos?",
+  "textPaymentMeth":"Método de Pago",
+  "textRequired":"Campo requerido",
+  "textYearVerify":"Verifica el año",
+  "textSuccefulPayment":"Código de confirmación",
+
+  "couponNormal":"ERNESTOLEAL",
+  "couponPorcent":"testito-ramiro",
+  "couponReferral":"TETRER2321",
+
+  "NoMounths":"0",
+  "ThreeMonths":"3",
+  "SixMonths":"6",
+  "NineMonths":"9",
+  "TwelveMonths":"12",
+  "EighteenMonths":"18"
+}

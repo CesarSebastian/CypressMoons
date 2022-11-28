@@ -1,0 +1,203 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 0,
+    "pending": 0,
+    "failures": 5,
+    "start": "2020-12-16T22:56:47.025Z",
+    "end": "2020-12-16T22:58:09.460Z",
+    "duration": 82435,
+    "testsRegistered": 5,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2d44a404-9942-4e76-8f89-f1f4c1adb355",
+      "title": "",
+      "fullFile": "cypress/integration/SixMonthsDiscount/SixMonths_Discount_NoCoupon_NoPayment_4.js",
+      "file": "cypress/integration/SixMonthsDiscount/SixMonths_Discount_NoCoupon_NoPayment_4.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "788c1b9d-f565-4709-bdd9-3e57e1715b68",
+          "title": "SixMonths_Discount_NoCoupon_NoPayment_4",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Purchase Summary",
+              "fullTitle": "SixMonths_Discount_NoCoupon_NoPayment_4 Purchase Summary",
+              "timedOut": null,
+              "duration": 60605,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.VisitPage(this.env.hostMex + this.env.PriceLowerNAnticipo);\ncy.ContainsText(this.data.textWhatPayment);\ncy.ValidateExistCoupon(false);\ncy.ButtonClick(this.data.buttonContinue);",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://checkout-dev-e42c8.web.app/__cypress/runner/cypress_runner.js:156882:13)\n    at https://checkout-dev-e42c8.web.app/__cypress/runner/cypress_runner.js:157865:16\n    at tryCatcher (https://checkout-dev-e42c8.web.app/__cypress/runner/cypress_runner.js:10584:23)\n    at https://checkout-dev-e42c8.web.app/__cypress/runner/cypress_runner.js:5706:41\n    at tryCatcher (https://checkout-dev-e42c8.web.app/__cypress/runner/cypress_runner.js:10584:23)\n    at Promise._settlePromiseFromHandler (https://checkout-dev-e42c8.web.app/__cypress/runner/cypress_runner.js:8519:31)\n    at Promise._settlePromise (https://checkout-dev-e42c8.web.app/__cypress/runner/cypress_runner.js:8576:18)\n    at Promise._settlePromise0 (https://checkout-dev-e42c8.web.app/__cypress/runner/cypress_runner.js:8621:10)\n    at Promise._settlePromises (https://checkout-dev-e42c8.web.app/__cypress/runner/cypress_runner.js:8697:18)\n    at _drainQueueStep (https://checkout-dev-e42c8.web.app/__cypress/runner/cypress_runner.js:5291:12)\n    at _drainQueue (https://checkout-dev-e42c8.web.app/__cypress/runner/cypress_runner.js:5284:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://checkout-dev-e42c8.web.app/__cypress/runner/cypress_runner.js:5300:5)\n    at Async.drainQueues (https://checkout-dev-e42c8.web.app/__cypress/runner/cypress_runner.js:5170:14)\nFrom Your Spec Code:\n    at Context.eval (https://checkout-dev-e42c8.web.app/__cypress/tests?p=cypress/support/index.js:159:6)",
+                "diff": null
+              },
+              "uuid": "f6c11069-76d2-40b1-820c-580e141941f8",
+              "parentUUID": "788c1b9d-f565-4709-bdd9-3e57e1715b68",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Shipping Address",
+              "fullTitle": "SixMonths_Discount_NoCoupon_NoPayment_4 Shipping Address",
+              "timedOut": null,
+              "duration": 4908,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.ContainsText(this.data.textWhereSend);\ncy.ClearShippingA();\ncy.ShippingAddress(this.data.street, this.data.interiorNumber, this.data.zipCode, this.data.colony, this.data.state, this.data.city, this.data.reference);\ncy.ButtonClick(this.data.buttonContinue);",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: '¿Dónde enviaremos tus moons cuando esten listos?' but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: '¿Dónde enviaremos tus moons cuando esten listos?' but never did.\n    at Context.eval (https://checkout-dev-e42c8.web.app/__cypress/tests?p=cypress/support/index.js:211:6)",
+                "diff": null
+              },
+              "uuid": "cb2846cb-c5c3-4144-8b04-ec292ec4f476",
+              "parentUUID": "788c1b9d-f565-4709-bdd9-3e57e1715b68",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Payment Method",
+              "fullTitle": "SixMonths_Discount_NoCoupon_NoPayment_4 Payment Method",
+              "timedOut": null,
+              "duration": 4662,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.ContainsText(this.data.textPaymentMeth);\ncy.PaymentMethod(this.data.cardName, this.data.cardIDMexicoMeses, this.data.month, this.data.year, this.data.cvc);",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'Método de Pago' but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'Método de Pago' but never did.\n    at Context.eval (https://checkout-dev-e42c8.web.app/__cypress/tests?p=cypress/support/index.js:211:6)",
+                "diff": null
+              },
+              "uuid": "9c86d983-35cb-4fb2-86d8-15cc6f7404d6",
+              "parentUUID": "788c1b9d-f565-4709-bdd9-3e57e1715b68",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TestToBackend",
+              "fullTitle": "SixMonths_Discount_NoCoupon_NoPayment_4 TestToBackend",
+              "timedOut": null,
+              "duration": 5191,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.ValitadeMSI(this.data.NineMonths);\ncy.ButtonClick(this.data.buttonPayment);\ncy.wait(10000);",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `#installments-selector-two`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#installments-selector-two`, but never found it.\n    at Context.eval (https://checkout-dev-e42c8.web.app/__cypress/tests?p=cypress/support/index.js:182:10)",
+                "diff": null
+              },
+              "uuid": "42914b35-1f50-4697-87fb-1064b5576c4e",
+              "parentUUID": "788c1b9d-f565-4709-bdd9-3e57e1715b68",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "ValidateSuccessfulPayment",
+              "fullTitle": "SixMonths_Discount_NoCoupon_NoPayment_4 ValidateSuccessfulPayment",
+              "timedOut": null,
+              "duration": 4781,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.ValidateCodeConfirmation(this.data.textSuccefulPayment);",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find content: 'Código de confirmación' but never did.",
+                "estack": "AssertionError: Timed out retrying: Expected to find content: 'Código de confirmación' but never did.\n    at Context.eval (https://checkout-dev-e42c8.web.app/__cypress/tests?p=cypress/support/index.js:244:6)",
+                "diff": null
+              },
+              "uuid": "1ae4f86a-5d3a-424c-8b86-5d8d8259fcf6",
+              "parentUUID": "788c1b9d-f565-4709-bdd9-3e57e1715b68",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f6c11069-76d2-40b1-820c-580e141941f8",
+            "cb2846cb-c5c3-4144-8b04-ec292ec4f476",
+            "9c86d983-35cb-4fb2-86d8-15cc6f7404d6",
+            "42914b35-1f50-4697-87fb-1064b5576c4e",
+            "1ae4f86a-5d3a-424c-8b86-5d8d8259fcf6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 80147,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
